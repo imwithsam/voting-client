@@ -6,7 +6,7 @@ module.exports = {
     'webpack/hot/only-dev-server',
     './src/index.jsx'
   ],
-  moudle: {
+  module: {
     loaders: [{
       test: /\.jsx?$/,
       exclude: /node_modules/,
