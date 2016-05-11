@@ -3,6 +3,7 @@ import PureRenderMixin from 'react-addons-pure-render-mixin'
 import {connect} from 'react-redux'
 import Winner from './Winner'
 import Vote from './Vote'
+import * as actionCreators from '../action_creators'
 
 // Voting is the "dumb" pure functional component.
 export const Voting = React.createClass({
@@ -30,4 +31,4 @@ connect(mapStateToProps)(Voting)
 // VotingContainer is the "smart" connected Voting component. It wraps the
 // "dumb" Voting component with react-redux logic that keeps it in sync with the
 // Redux Store.
-export const VotingContainer = connect(mapStateToProps)(Voting)
+export const VotingContainer = connect(mapStateToProps, actionCreators)(Voting)
