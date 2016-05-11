@@ -44,6 +44,8 @@ function mapPropsToState (state) {
   return {
     pair: state.getIn['vote', 'pair'],
     tally: state.getIn['vote', 'tally'],
+    pair: state.getIn(['vote', 'pair']),
+    tally: state.getIn(['vote', 'tally']),
     winner: state.get('winner')
   }
 }
